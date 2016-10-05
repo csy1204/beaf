@@ -1,0 +1,49 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<p>
+<sNo>1</sNo> 몇층 
+<row>1</row> 
+<col>1</col> 
+<sty>1</sty> 
+<zon>가</zon> 
+<rNm>A</rNm> 
+<cNm>1</cNm> 
+<sNm>1</sNm> 
+<sTp>01</sTp> 
+<sCr>#e4e29a</sCr> 
+<gId>195516</gId> 
+<gNm>현장</gNm> 
+<sYN>N</sYN> 이게 예매 가능
+<rYN>N</rYN> <rUr/> 
+<pYN>N</pYN> 
+<sCd>02</sCd>
+</p>
+
+
+<% @screen.each do |s| %>
+  <% unless s.css("sNm").inner_text == "" %>
+      <% if (s.css("sYN").inner_text=="N") && (s.css("gNm").inner_text=="인터넷") %>
+          <%= s.inner_text %><br><br>
+      <% end %>
+  <% end %>
+<% end %>
+
+<% @screen1.each do |s| %>
+  <% unless s.css("sNm").inner_text == "" %>
+      <% if (s.css("sYN").inner_text=="N") && (s.css("gNm").inner_text=="인터넷") %>
+          <%= s.inner_text %><br><br>
+      <% end %>
+  <% end %>
+<% end %>
+
+<% @screen2.each do |s| %>
+  <% unless s.css("sNm").inner_text == "" %>
+      <% if (s.css("sYN").inner_text=="N") && (s.css("gNm").inner_text=="인터넷") %>
+          <%= s.inner_text %><br><br>
+      <% end %>
+  <% end %>
+<% end %>
+
+
+
